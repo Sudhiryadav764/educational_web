@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>New User Sign-Up Page</title>
+ <!-- CSS -->
+ <style>
+    .sign_up {
+        background-color:rgb(4,4,80);
+        height: auto;
+        width: 200px; 
+        margin: 10px;
+        padding: 5px;
+        border-radius: 6px ;
+        color: #ffffff;
+        text-align: center;
+    }
+ .box {
+     margin: auto;
+     color: white;
+     padding: 50px;
+     width: 300px;
+     height: auto;
+     background-color: rgb(4,4,80);
+     font-size: 18px;
+     border-radius: 6px;
+ }
+ button {
+     color: rgb(4,4,80);
+     background-color: rgb(206, 206, 206);
+     width: 120px;
+     height: 40px;
+     margin-left: 90px;
+     border-radius: 6px ;
+     font-size: 16px;
+     cursor: pointer;
+ }
+ input {
+     height: 25px;
+     border-radius: 6px;
+     width: 100%;
+     margin-bottom: 15px;
+ }
+ a {
+     color: white;
+     font-size: 15px;
+ }
+ </style>
+ <script>
+     // JavaScript for Frontend Validation
+     function validateForm(event) {
+         const password = document.getElementById("pass").value;
+         const confirmPassword = document.getElementById("passw").value;
+
+         if (password !== confirmPassword) {
+             alert("Passwords do not match!");
+             event.preventDefault(); // Prevent form submission
+         }
+     }
+ </script>
+</head>
+<body>
+
+  <h1 class="sign_up">SIGN UP</h1>
+ <form action="do_login.php" method="post" onsubmit="validateForm(event)">
+    <div class="box">
+        <label for="username">User Name:</label>
+        <input type="text" name="username" id="username" required>
+        
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass" required>
+        
+        <label for="passw">Confirm Password:</label>
+        <input type="password" name="passw" id="passw" required>
+        
+        <button type="submit">Sign Up</button>
+    </div>
+</form>
+
+</body>
+</html>
+
+
+

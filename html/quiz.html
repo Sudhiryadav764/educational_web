@@ -1,0 +1,131 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Quiz</title>
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .box {
+    height: 60px;
+    width: 100%;
+    background-color: #040458;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    margin-bottom: 15px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  ul li {
+    margin-bottom: 10px;
+    list-style: none;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  button {
+    height: 50px;
+    width: 150px;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #040458;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #05058b;
+  }
+  #result-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    background: #e6f7ff;
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #040458;
+  }
+ </style>
+</head>
+<body>
+ <div class="box">
+ <div class="circle">
+ <p>9th Quiz Challenge</p>
+ </div>
+ </div>
+ <div id="quiz-container"></div>
+ <div class="btn"><button onclick="submitQuiz()">Submit Answers</button></div>
+ <div id="result-container"></div>
+ <script>
+ let questions = [];
+ // Use AJAX or Fetch API to get questions from the server
+ fetch('../php/quiz.php')
+ .then(response => response.json())
+ .then(data => {
+ questions = data;
+ // Use the questions to dynamically generate the quiz UI
+ displayQuiz();
+ })
+ .catch(error => console.error('Error fetching questions:', error));
+ function displayQuiz() {
+ const quizContainer = document.getElementById('quiz-container');
+ questions.forEach((question, index) => {
+ const questionElement = document.createElement('div');
+ questionElement.innerHTML = `
+ <p>${index + 1}. ${question.question}</p>
+ <ul>
+ ${question.options.map((option, optionIndex) => `
+ <li>
+ <input type="radio" name="q${index}" value="${optionIndex}">
+ ${option}
+ </li>`).join('')}
+ </ul>
+ `;
+ quizContainer.appendChild(questionElement);
+ });
+ }
+ function submitQuiz() {
+ const resultContainer = document.getElementById('result-container');
+ let score = 0;
+ questions.forEach((question, index) => {
+ const selectedOptionIndex =
+document.querySelector(`input[name="q${index}"]:checked`);
+ if (selectedOptionIndex) {
+ const selectedOption = parseInt(selectedOptionIndex.value);
+ if (question.options[selectedOption] === question.correctAnswer) {
+ score++;
+ }
+ }
+ });
+ const resultMessage = `You scored ${score} out of ${questions.length}.`;
+ resultContainer.innerHTML = `<p>${resultMessage}</p>`;
+ }
+ </script>
+</body>
+</html>

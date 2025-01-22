@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Batch</title>
+    <link rel="stylesheet" href="css/forml.css">
+</head>
+<body>
+    <div class="heading">
+        Application Form
+    </div>
+    <div class="form-container">
+        <form action="appform.php" method="post">
+
+            <fieldset>
+                <legend>Personal Details</legend>
+                <table>
+                    <tr>
+                        <td><label for="username">Name: </label></td>
+                        <td><input type="text" name="username" id="username" placeholder="Username" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fname">Father's Name: </label></td>
+                        <td><input type="text" name="fname" id="fname" placeholder="Father's Name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mname">Mother's Name: </label></td>
+                        <td><input type="text" name="mname" id="mname" placeholder="Mother's Name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail: </label></td>
+                        <td><input type="email" name="email" id="email" placeholder="Email Address" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="adhar">Aadhar Number: </label></td>
+                        <td><input type="number" name="adhar" id="adhar" placeholder="Aadhar No." required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mob">Mobile No.: </label></td>
+                        <td><input type="number" name="mob" id="mob" placeholder="Mobile No." required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date of Birth: </label></td>
+                        <td><input type="date" name="dob" id="dob" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Course Details</legend>
+                <table>
+                    <tr>
+                        <td><label for="userclass">Class: </label></td>
+                        <td>
+                            <select name="userclass" id="userclass">
+                                <option value="6">6th</option>
+                                <option value="7">7th</option>
+                                <option value="8">8th</option>
+                                <option value="9">9th</option>
+                                <option value="10">10th</option>
+                                <option value="11">11th</option>
+                                <option value="12">12th</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="usersub">Subject: </label></td>
+                        <td>
+                            <select name="usersub" id="usersub">
+                                <option value="C language">C language</option>
+                                <option value="C++">C++</option>
+                                <option value="Java">Java</option>
+                                <option value="Python">Python</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Residential Details</legend>
+                <table>
+                    <tr>
+                        <td><label for="street">Street: </label></td>
+                        <td><input type="text" name="street" id="street" placeholder="Street" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City: </label></td>
+                        <td><input type="text" name="city" id="city" placeholder="City" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pincode">Pincode: </label></td>
+                        <td><input type="number" name="pincode" id="pincode" placeholder="Pincode" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="district">District: </label></td>
+                        <td><input type="text" name="district" id="district" placeholder="District" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State: </label></td>
+                        <td><input type="text" name="state" id="state" placeholder="State" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Payment</legend>
+                <strong>
+                    "Please scan the UPI QR code, transfer an amount of Rs.500, and kindly provide the transaction ID in the text box below.<br>If any error occurs, your registration will be cancelled, and the amount will be refunded to your account. Thank you!"
+                </strong>
+                <br>
+                <img src="./scanner.jpg" alt="UPI QR Code" width="200px" height="200px"> 
+                <br>
+                <label for="transaction">Transaction ID: </label>
+                <input type="text" name="transaction" id="transaction" placeholder="Transaction ID" required>
+                <br>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Declaration</legend>
+                <div>
+                    <input type="checkbox" name="dec" id="dec" required>
+                    <label for="dec">
+                        <strong>
+                            I declare that both my parents are aware of and consent to the submission of my application form.<br>
+                            We have thoroughly verified all the details in the application, including payment information, before submission.
+                        </strong>
+                    </label>
+                </div>
+                <br>
+                <button type="reset" aria-label="Reset the form">Reset</button>
+                <button type="submit" aria-label="Submit the application">Submit</button>
+            </fieldset>
+            
+        </form>
+    </div>
+</body>
+</html>

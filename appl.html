@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Batch</title>
+  <link rel="stylesheet" href="css/forml.css">
+</head>
+<body>
+  <div class="heading">
+    <h1>Application Form</h1>
+  </div>
+  <div class="form-container">
+    <form action="php/appform.php" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+          <tr>
+            <td><label for="username">Name: </label></td>
+            <td><input type="text" name="username" id="username" placeholder="User Name" required></td>
+          </tr>
+          <tr>
+            <td><label for="fname">Father's Name: </label></td>
+            <td><input type="text" name="fname" id="fname" placeholder="Father's Name" required></td>
+          </tr>
+          <tr>
+            <td><label for="mname">Mother's Name: </label></td>
+            <td><input type="text" name="mname" id="mname" placeholder="Mother's Name" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">E-mail: </label></td>
+            <td><input type="email" name="email" id="email" placeholder="eg: abc@def.com" required></td>
+          </tr>
+          <tr>
+            <td><label for="adhar">Aadhar Number: </label></td>
+            <td><input type="number" name="adhar" id="adhar" placeholder="Aadhar No" required></td>
+          </tr>
+          <tr>
+            <td><label for="mob">Mobile No.: </label></td>
+            <td><input type="number" name="mob" id="mob" placeholder="eg: 9988776655" required></td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date of Birth: </label></td>
+            <td><input type="date" name="dob" id="dob" required></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Course Details</legend>
+        <table>
+          <tr>
+            <td><label for="userclass">Class: </label></td>
+            <td>
+              <select name="userclass" id="userclass" required>
+                <option value="9">9th</option>
+                <option value="10">10th</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="usersub">Subject: </label></td>
+            <td>
+              <select name="usersub" id="usersub" required>
+                <option value="science">Science</option>
+                <option value="socialsci">Social Science</option>
+                <option value="computersci">Computer Science</option>
+                <option value="maths">Maths</option>
+                <option value="english">English</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Residential Details</legend>
+        <table>
+          <tr>
+            <td><label for="street">Street: </label></td>
+            <td><input type="text" name="street" id="street" placeholder="Street" required></td>
+          </tr>
+          <tr>
+            <td><label for="city">City: </label></td>
+            <td><input type="text" name="city" id="city" placeholder="City" required></td>
+          </tr>
+          <tr>
+            <td><label for="pincode">Pincode: </label></td>
+            <td><input type="number" name="pincode" id="pincode" placeholder="123456" required></td>
+          </tr>
+          <tr>
+            <td><label for="district">District: </label></td>
+            <td><input type="text" name="district" id="district" placeholder="District" required></td>
+          </tr>
+          <tr>
+            <td><label for="state">State: </label></td>
+            <td><input type="text" name="state" id="state" placeholder="State" required></td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Payment</legend>
+        <p>
+          Please scan the UPI QR code, transfer an amount of Rs. 500, and provide
+          the transaction ID below. If any error occurs, your registration will be
+          canceled, and the amount will be refunded to your account. Thank you!
+        </p>
+        <img src="img/scanner.jpg" alt="UPI QR Code" id="qr-code">
+        <br>
+        <label for="transaction">Transaction ID: </label>
+        <input type="text" name="transaction" id="transaction" placeholder="Transaction ID" required>
+      </fieldset>
+      <fieldset>
+        <legend>Declaration</legend>
+        <input type="checkbox" name="dec" id="decl" required>
+        <label for="decl">
+          I declare that both my parents are aware of and consent to the submission of my application form. We have thoroughly verified all details in the application, including payment information, before submission.
+        </label>
+        <br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

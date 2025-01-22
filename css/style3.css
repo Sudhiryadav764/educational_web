@@ -1,0 +1,147 @@
+*{
+     margin: 0px;
+     font-family: 'Poppins', sans-serif;
+    }
+    /* navigation */
+    /* heading */
+    .our_about{
+     background-color: rgb(4, 4, 88);
+     height: 70px;
+     width: 100%;
+    }
+    .circle{
+     margin: 20px;
+     background-color: rgb(3, 3, 131) ;
+     color: white;
+     width: 160px;
+     height: 160px;
+     border-radius: 50%;
+    }
+    .circle p{
+     text-align: center;
+     font-size: 30px;
+     padding-top: 50px;
+     font-weight: 700;
+    }
+    
+    /* body of about */
+    .title_about{
+     display: flex;
+     justify-content: space-around;
+     color: rgb(4, 4, 88);
+    }
+    .title_about img{
+     background-color: #ffffff;
+     border-radius: 42%;
+     height: 200px;
+     margin-top: 64px;
+     width: 200px;
+     padding: 20px
+    }
+    .body_about{
+     width: 400px;
+     padding: 40px;
+    }
+    .body_about span{
+     font-size: 30px;
+     font-weight: 700;
+     padding: 20px;
+    }
+    .body_about p{
+     font-size: 17px;
+     padding: 20px;
+    }
+    /* values */
+    .values{
+     display: flex;
+     justify-content: space-evenly;
+     padding: 0 50px 50px 50px;
+    }
+    .val{
+     padding: 30px;
+     font-size: 18px;
+     margin: 20px;
+    }
+    .val span{
+     font-size: 20px;
+     font-weight: 700;
+     color: rgb(4, 4, 88) ;
+    }
+    /* teacher */
+    /* each teacher */
+    .teacher{
+     /* width: 800px; */
+     border: solid 2px rgb(3, 108, 169);
+     padding: 50px;
+     border-top-left-radius: 18px;
+     border-bottom-right-radius: 18px;
+     }
+     .teacher img{
+     border-radius: 50%;
+     width: 100px;
+     height: 100px;
+     }
+     /* all teacher */
+     .team_det{
+     display: flex;
+     justify-content: space-around;
+     padding: 50px;
+     }
+     /* name of teacher */
+     div .name{
+     font-size: 20px;
+     font-weight: 800;
+     padding: 10px;
+     }
+     .values p, .teacher p{
+     color: rgb(5, 46, 136);
+     font-size: 18px;
+     }
+    .last_part{
+     background-color: rgb(4, 4, 88);
+     font-size: 15px;
+     padding: 30px;
+     margin-top: 20px;
+     color: azure;
+     border-radius: 1px;
+     }
+
+     /* gallery style */
+
+     .gallery_images {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+          margin-top: 30px;
+      }
+      .gallery_images img {
+          width: 200px; 
+          height: 180px; 
+          border-radius: 5px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .gallery_images img:hover {
+          transform: scale(1.1); 
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+                  
+     .footer_contact{
+     color: azure;
+     font-size: 15px;
+     padding: 30px;
+     margin-top: 20px;
+     color: azure;
+     border-radius: 1px;
+    }
+    footer{
+     display: flex;
+     background-color: rgb(4, 4, 88);
+     font-size: 20px;
+     padding: 30px;
+     margin-top: 20px;
+     color: azure;
+     border-radius: 1px;
+     justify-content: space-around;
+    }

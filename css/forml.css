@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+   }
+   .heading{
+    font-size: 30px;
+    padding: 20px;
+    color: rgb(4, 4, 88);
+    text-align: center;
+   }
+   fieldset{
+    width: 600px;
+    margin: auto;
+   }
+   label{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(4, 4, 88);
+   }
+   label,input{
+    /* margin: 10px; */
+    height: 25px;
+    font-size: 18px;
+   }
+   select{
+    height: 30px;
+   }
+   table{
+    margin: auto;
+   }
+   button{
+    width: 70px;
+    height: 35px;
+    border-radius: 4px;
+    background-color: rgb(171, 219, 250);;
+   }
+   legend{
+    color:rgb(4, 4, 88); ;
+    text-align: center;
+    font-size: 22px;
+   }
+   input{
+    border-radius: 5px;
+    color: rgb(5, 5, 183);
+   }
+   #qr-code {
+    width: 100px;
+    height: 100px;
+}

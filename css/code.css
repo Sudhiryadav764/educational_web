@@ -1,0 +1,48 @@
+*{
+ background-color: rgb(65, 63, 63);
+ color: rgb(102, 242, 102);
+ font-family: 'Poppins', sans-serif;
+ }
+ h2{
+ color: white;
+ }
+ .content{
+ display: flex;
+ justify-content: space-around;
+ margin: 30px;
+ }
+ .para{
+ width: 600px;
+ margin: 30px;
+ }
+ .box{
+ background-color: rgb(87, 87, 87);
+ border-radius: 5px;
+ width: 230px;
+ color: rgb(11, 245, 128);
+ padding: 8px;
+ margin: 15px;
+ }
+ .box1{
+ background-color: rgb(87, 87, 87);
+ }
+ h1,p{
+ text-align: center;
+ color: white;
+ }
+ .quiz{
+ width: 500px;
+ margin: auto;
+ }
+ button{
+ padding: 8px;
+ margin: 3px;
+ border-radius: 4px;
+ background-color: rgb(16, 16, 16);
+ }
+ a{ padding: 5px;
+ margin: 100px;
+ border-radius: 4px;
+ background-color: rgb(16, 16, 16);
+ text-decoration: none;
+ }
